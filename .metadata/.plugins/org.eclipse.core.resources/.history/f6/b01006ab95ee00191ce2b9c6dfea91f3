@@ -1,0 +1,16 @@
+package com.estudo;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class usuarioDtoTest {
+
+	@Test
+	public void test()  {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.estudo.Dto;
+
+public class enderecoDto {
+
+}

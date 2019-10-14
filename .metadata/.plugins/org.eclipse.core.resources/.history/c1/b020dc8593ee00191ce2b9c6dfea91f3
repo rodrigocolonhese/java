@@ -1,0 +1,95 @@
+package com.estudo.Dto;
+
+import java.io.Serializable;
+
+public class enderecoDto implements Serializable {
+
+	// variaveis privadas
+
+	private static final long serialVersionUID = -816152511423795679L;
+
+	private int codigoEndereco;
+
+	private int codigoUsuario;
+
+	private String logradouro;
+
+	private String Uf;
+
+	private String cidade;
+
+	private String bairro;
+
+	private int numero;
+
+	private String complemento;
+
+	// sets
+
+	public void setCodigoEndereco(int codigoEndereco) {
+		this.codigoEndereco = codigoEndereco;
+	}
+
+	public void setCodigoUsuario(int codigoUsuario) {
+		this.codigoUsuario = codigoUsuario;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public void setUf(String Uf) {
+		this.Uf = Uf;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	// gets
+
+	public int getCodigoEndereco() {
+		return codigoEndereco;
+	}
+
+	public int getCodigoUsuario() {
+		return codigoUsuario;
+	}
+
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public String getUf() {
+		return Uf;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+}
+

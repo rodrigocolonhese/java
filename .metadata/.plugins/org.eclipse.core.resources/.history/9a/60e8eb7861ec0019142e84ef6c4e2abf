@@ -1,0 +1,113 @@
+package com.estudo.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.estudo.Dto.usuarioDto;
+
+@RestController
+@RequestMapping(value = "/usuario")
+public class usuarioController {
+	
+	@GetMapping(value = "/buscaid/{codigoUsuario}")
+	public usuarioDto Buscarid(@PathVariable(name="codigoUsuario", required=true) int codigoUsuario)
+	{
+		usuarioDto usuaRequest = new usuarioDto();
+		
+		usuarioDto usuaResponse = new usuarioDto();
+		
+		usuaRequest.setCodigoUsuario(codigoUsuario);
+		
+		try {
+			//fazer o select no banco. com o requesto
+			usuaResponse = usuaRequest;
+		}
+		catch (Exception e) {
+			return (usuarioDto) ResponseEntity.status(HttpStatus.BAD_REQUEST);
+		}
+		
+		return usuaResponse;
+	}
+	
+	@GetMapping(value = "/busca")
+	public ResponseEntity<usuarioDto> Buscar()
+	{
+		usuarioDto usuaRequest = new usuarioDto();
+		
+		usuarioDto usuaResponse = new usuarioDto();
+		
+		
+		try {
+			//fazer o select no banco. com o requesto
+			usuaResponse = usuaRequest;
+		}
+		catch (Exception e) {
+			return new ResponseEntity<usuarioDto>(usuaResponse, HttpStatus.BAD_REQUEST);
+		}
+		
+		return new ResponseEntity<usuarioDto>(usuaResponse, HttpStatus.OK);
+	}
+	
+	@PutMapping(value = "/atualizar", consumes = {MediaType.APPLICATION_JSON_VALUE})
+	public usuarioDto atualizar(@RequestBody usuarioDto usuario)
+	{
+		usuarioDto usuaRequest = new usuarioDto();
+		
+		usuarioDto usuaResponse = new usuarioDto();
+		
+		try {
+			//fazer o select no banco. com o requesto
+			usuaResponse = usuaRequest;
+		}
+		catch (Exception e) {
+			return (usuarioDto) ResponseEntity.status(HttpStatus.BAD_REQUEST);
+		}
+		
+		return usuaResponse;
+	}
+	
+	@PostMapping(value = "/cadastra")
+	public usuarioDto cadastrar(@RequestBody usuarioDto usuario)
+	{
+		usuarioDto usuaRequest = new usuarioDto();
+		
+		usuarioDto usuaResponse = new usuarioDto();
+		
+		try {
+			//fazer o select no banco. com o requesto
+			usuaResponse = usuaRequest;
+		}
+		catch (Exception e) {
+			return (usuarioDto) ResponseEntity.status(HttpStatus.BAD_REQUEST);
+		}
+		
+		return (usuarioDto) ResponseEntity.status(HttpStatus.OK);
+	}
+	
+	@DeleteMapping(value = "/delete/{codigoUsuario}")
+	public HttpStatus deletar(@PathVariable(name="codigoUsuario", required=true) int codigoUsuario)
+	{
+		usuarioDto usuaRequest = new usuarioDto();
+		int teste = 1;
+		try {
+			//fazer o select no banco. com o requesto
+			teste = 1+1;
+		}
+		catch (Exception e) {
+			return HttpStatus.NO_CONTENT;
+		}
+		
+		return HttpStatus.OK;
+	}
+
+}
+

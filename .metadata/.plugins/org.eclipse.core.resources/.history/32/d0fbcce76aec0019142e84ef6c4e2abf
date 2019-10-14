@@ -1,0 +1,22 @@
+package com.estudo.Dao;
+
+import com.estudo.Dto.usuarioDto;
+
+public class usuarioDao {
+
+	private usuarioRepository repository;
+	
+	public usuarioDto atualizar(usuarioDto dto)
+	{
+	      usuarioDto save = repository.save(dto);
+	       return save;
+	  
+	}
+	
+	public usuarioDto buscar(int codigo)
+	{
+	      usuarioDto select = repository.findOne(codigo);
+	       return select;
+	  
+	}
+}

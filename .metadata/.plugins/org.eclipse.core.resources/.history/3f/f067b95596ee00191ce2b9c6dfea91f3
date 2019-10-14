@@ -1,0 +1,18 @@
+package com.estudo;
+
+import static org.junit.Assert.*;
+import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
+
+import org.junit.Test;
+import org.omg.PortableInterceptor.SUCCESSFUL;
+
+import junit.framework.TestCase;
+
+public class usuarioDtoTest {
+
+	@Test
+	public void test()  {
+		withSuccess();
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.estudo.controllerTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class usuarioControllerTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

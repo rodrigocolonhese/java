@@ -1,0 +1,16 @@
+package com.estudo.Dao;
+
+import com.estudo.Dto.usuarioDto;
+
+public class usuarioDao {
+
+	private usuarioRepository repository;
+	
+	public usuarioDto atualizar(usuarioDto dto)
+	{
+	      usuarioDto save = repository.save(dto);
+	      
+		  return save;
+	  
+	}
+}

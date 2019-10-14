@@ -1,0 +1,26 @@
+package com.estudo.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.estudo.Dto.usuarioDto;
+@Component
+public class usuarioDao {
+
+	@Autowired
+	private usuarioRepository repository;
+	
+	public usuarioDto atualizar(usuarioDto dto)
+	{
+	      usuarioDto save = repository.save(dto);
+	       return save;
+	  
+	}
+	
+	public usuarioDto buscar(int codigo)
+	{
+	      usuarioDto select = repository.findOne(codigo);
+	       return select;
+	  
+	}
+}
